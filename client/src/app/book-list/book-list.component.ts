@@ -12,7 +12,7 @@ export class BookListComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
-    this.http.get('/api/books.json')
+    this.http.get('http://localhost:3000/api/books.json')
       .subscribe(response => this.books = response.json());
   }
 
